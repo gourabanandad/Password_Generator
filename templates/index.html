@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-lock"></i> Secure Password Generator</h1>
+            <p>Create strong, random passwords for your accounts</p>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="input-group">
+                    <label for="length">Password Length:</label>
+                    <input type="number" id="length" min="4" max="128" value="15">
+                </div>
+                <button id="generate-btn">Generate Password</button>
+            </div>
+
+            <div class="result">
+                <div class="password-display">
+                    <input type="text" id="password" readonly>
+                    <button id="copy-btn" title="Copy to clipboard">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+                <div class="strength-meter">
+                    <div class="strength-bar"></div>
+                    <span class="strength-text">Password Strength</span>
+                </div>
+            </div>
+
+            <div class="tips">
+                <h3><i class="fas fa-lightbulb"></i> Password Tips</h3>
+                <ul>
+                    <li>Use at least 12 characters</li>
+                    <li>Include numbers, symbols, and mixed case</li>
+                    <li>Avoid dictionary words or personal info</li>
+                    <li>Use unique passwords for each account</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by FastAPI | Deployed on Render</p>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification">Password copied!</div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
