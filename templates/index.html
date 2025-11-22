@@ -25,7 +25,8 @@
 
             <div class="result">
                 <div class="password-display">
-                    <input type="text" id="password" readonly>
+                    <label for="password" class="sr-only">Generated password</label>
+                    <input type="text" id="password" readonly title="Generated password" placeholder="Click Generate to create a password" aria-label="Generated password">
                     <button id="copy-btn" title="Copy to clipboard">
                         <i class="far fa-copy"></i>
                     </button>
